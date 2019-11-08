@@ -6,15 +6,19 @@ using namespace std;
 
 class Estudiante
 {
-    public:
+    private:
             string nombre;
             string apellido;
             string codigo;
+    public:
             Estudiante(string,string,string);
+            Estudiante();
+            ~Estudiante();
 
-            void Obtener_nombre();
-            void Obtener_apellido();
-            void Obtener_codigo();
+            string Obtener_nombre();
+            string Obtener_apellido();
+            string Obtener_codigo();
 };
 
 #endif // ESTUDIANTE_H
+
