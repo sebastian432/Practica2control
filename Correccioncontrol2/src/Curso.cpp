@@ -3,12 +3,18 @@
 #include <iostream>
 using namespace std;
 
-Curso::Curso(int _cantidadAlumnos,string _nombre,string _codigo)
+Curso::Curso(int _cantidadAlumnos,string _nombre,string _codigo,Estudiante* _alumnos)
 {
     cout<<"normal"<<endl;
     cantidadAlumnos=_cantidadAlumnos;
     nombre=_nombre;
     codigo=_codigo;
+    alumnos=_alumnos;
+
+}
+Curso::Curso()
+{
+
 }
 
 Curso::Curso(const Curso& C)
@@ -17,28 +23,34 @@ Curso::Curso(const Curso& C)
     cantidadAlumnos=C.cantidadAlumnos;
     nombre=C.nombre;
     codigo=C.codigo;
+    alumnos=C.alumnos;
 }
 
-void Curso::Obtener_nombre()
+string Curso::Ob_nombre()
 {
-    cout<<"El alumno se llama: "<<nombre<<endl;
+   return nombre;
 }
 
-void Curso::Obtener_codigo()
+string Curso::Ob_codigo()
 {
-    cout<<"El codigo del alumno es: "<<codigo<<endl;
+    return codigo;
 }
 
-void Curso::Obtener_cantidadAlumnos()
+int Curso::Ob_cantidadAlumnos()
 {
 
-    cout<<"hay "<<cantidadAlumnos<<" alumnos en total. "<<endl;
+    return cantidadAlumnos;
 }
 
-void Curso::Incrementa_Nestudiantes()
+Estudiante* Curso::Ob_direccion()
 {
-    aumento_cantidad=cantidadAlumnos+1;
-    cout<<"El numero de alumnos mas 1 es: "<<aumento_cantidad<<endl;
-    cout<<endl;
+    return alumnos;
+}
+
+
+int Curso::In_Nestudiantes()
+{
+    incrementar=cantidadAlumnos+1;
+    return incrementar;
 }
 
