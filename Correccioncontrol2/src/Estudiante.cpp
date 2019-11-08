@@ -10,19 +10,29 @@ Estudiante::Estudiante(string _nombre,string _apellido,string _codigo)
     codigo=_codigo;
 }
 
-
-void Estudiante::Obtener_nombre()
+Estudiante::Estudiante()
 {
-    cout<<"El nombre del estudiante es: "<<nombre<<endl;
+    nombre="Ivan";
+    apellido="Perez";
+    codigo="194";
 }
 
-void Estudiante::Obtener_apellido()
+Estudiante::~Estudiante()
 {
-    cout<<"El apellido del estudiante es: "<<apellido<<endl;
+
 }
 
-void Estudiante::Obtener_codigo()
+string Estudiante::Obtener_nombre()
 {
-    cout<<"El codigo del estudiante es: "<<codigo<<endl;
-    cout<<endl;
+    return nombre;
+}
+
+string Estudiante::Obtener_apellido()
+{
+    return apellido;
+}
+
+string Estudiante::Obtener_codigo()
+{
+    return codigo;
 }
