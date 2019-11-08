@@ -9,16 +9,21 @@ class Curso
 {
     private:
             int cantidadAlumnos;
-            int aumento_cantidad;
-    public:
             string nombre;
             string codigo;
-            Curso(int,string,string);
+            Estudiante *alumnos;
+            int incrementar;
+    public:
+            Curso(int,string,string,Estudiante *alumnos);
             Curso(const Curso& C);
-            void Obtener_nombre();
-            void Obtener_codigo();
-            void Obtener_cantidadAlumnos();
-            void Incrementa_Nestudiantes();
+            Curso();
+
+            string Ob_nombre();
+            string Ob_codigo();
+            int Ob_cantidadAlumnos();
+            int In_Nestudiantes();
+            Estudiante *Ob_direccion();
+
 };
 
 #endif // CURSO_H
